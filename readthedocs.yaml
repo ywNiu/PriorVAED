@@ -10,4 +10,4 @@ python:
     - requirements: PVAED/docs/requirements.txt
 
 sphinx:
-  configuration: PVAED/docs/source/conf.py
+  configuration: PVAED/docs/conf.py
