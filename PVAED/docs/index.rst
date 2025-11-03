@@ -36,7 +36,7 @@ It's recommended to create a separate conda environment for running PVAED:
    #activate your environment
    conda activate PVAED_env
 
-Then download data of GSE204684 at https://datasets.cellxgene.cziscience.com/c7e6fe97-f615-41e4-a631-0c3c74a7d20f.h5ad and preprocess the data as data_process.ipynb.
+Then download data of GSE204684 at https://datasets.cellxgene.cziscience.com/c7e6fe97-f615-41e4-a631-0c3c74a7d20f.h5ad and preprocess the data as data_process.ipynb. The basic information is also available at: https://cellxgene.cziscience.com/collections/ceb895f4-ff9f-403a-b7c3-187a9657ac2c.
 
 Finally, run the demo of GSE204684.
 
