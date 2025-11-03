@@ -7,7 +7,7 @@ build:
 
 python:
   install:
-    - requirements: docs/requirements.txt
+    - requirements: PVAED/docs/requirements.txt
 
 sphinx:
-  configuration: docs/source/conf.py
+  configuration: PVAED/docs/source/conf.py
