@@ -24,7 +24,7 @@ First clone the repository.
 .. code-block:: python
 
    git clone https://github.com/MaLab-scGenomics/PriorVAED.git
-   cd PVED
+   cd PVAED
 
 It's recommended to create a separate conda environment for running PVAED:
 
