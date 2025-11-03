@@ -47,4 +47,4 @@ The latent embedings and model checkpoint files will be saved in ./data_GSE20468
 
 .. note::
 
-   If you want to change the model or path parameters, modify them in main.py or main_joint_fine_tunning.py directly in the parser part.
+   If you want to modify the default parameters of model or file path, change them in main.py or main_joint_fine_tunning.py directly in the parser part.
