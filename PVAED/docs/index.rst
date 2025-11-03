@@ -6,7 +6,8 @@ Beyond performance, PVAED offers improved interpretability through its prior-bas
 
 .. toctree::
    :maxdepth: 1
-   down_stream 
+
+   down_stream
 
 
 Overview of PVAED
