@@ -1,2 +1,3 @@
-GSE204684 data can be downloaded from GEO according to the accession number: GSE204684. Or, it could be download directly at CELLXGENE webset using url: https://datasets.cellxgene.cziscience.com/c7e6fe97-f615-41e4-a631-0c3c74a7d20f.h5ad 
+GSE204684 data can be downloaded from GEO according to the accession number: GSE204684. And it can be accessed at CELLXGENE: https://cellxgene.cziscience.com/collections/ceb895f4-ff9f-403a-b7c3-187a9657ac2c.
+Or, it could be download directly at CELLXGENE webset using url: https://datasets.cellxgene.cziscience.com/c7e6fe97-f615-41e4-a631-0c3c74a7d20f.h5ad. 
 As test case, the raw data (GSE204684) should be processed as done in data_process.ipynb, leaving 5000 hvgs, after which the processed data must be named as data_hvg5000.h5ad and located in current folder for direct usage in main.py.
