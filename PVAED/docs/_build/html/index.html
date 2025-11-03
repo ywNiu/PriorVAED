@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>PVAED: Prior-Guided Variational Autoencoders with Diffusion Denoising for Interpretable Single-Cell Representation Learning &#8212; PVAED_tutorial 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="pvaed-prior-guided-variational-autoencoders-with-diffusion-denoising-for-interpretable-single-cell-representation-learning">
+<h1>PVAED: Prior-Guided Variational Autoencoders with Diffusion Denoising for Interpretable Single-Cell Representation Learning<a class="headerlink" href="#pvaed-prior-guided-variational-autoencoders-with-diffusion-denoising-for-interpretable-single-cell-representation-learning" title="Link to this heading">¶</a></h1>
+<p>PVAED, a dimensionality reduction framework that integrates biological prior knowledge into a variational autoencoder (VAE) and further refines its latent embeddings with a diffusion-based denoising module.
+Beyond performance, PVAED offers improved interpretability through its prior-based encoder design, enabling prioritization and modeling of interpretable biological variables as hypergraphs.</p>
+</section>
+<section id="overview-of-pvaed">
+<h1>Overview of PVAED<a class="headerlink" href="#overview-of-pvaed" title="Link to this heading">¶</a></h1>
+<img alt="_images/F1.png" src="_images/F1.png" />
+<p>PVAED model schematic. a) The basic framework of PVAED model comprising a VAE model and a Diffusion model. After pre-training, the model undergoes joint fine-tuning with task specific new data. b) The detailed construction of PVAED. Prior information of pathway, TF-targets and protein complex are integrated as node in encoder layer. The connection between two encoder layer is sparsely connected informed by the gene-gene regulation or gene-prior object constituent relation. c) Low-dim cell embeddings from PVAED could be used for cell clustering task. d) VAED could be conducted for pathology related comparison task and then for interpretability task based on the trained prior encoder. e) PVAED could be instrumental in cell subpopulation discovery, uncovering subtle, pre-committed cellular subgroups.</p>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
+<p>First clone the repository.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">MaLab</span><span class="o">-</span><span class="n">scGenomics</span><span class="o">/</span><span class="n">PriorVAED</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">PVED</span>
+</pre></div>
+</div>
+<p>It’s recommended to create a separate conda environment for running PVAED:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#create an environment called PVAED_env using the environment.yml file.</span>
+<span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+
+<span class="c1">#activate your environment</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">PVAED_env</span>
+</pre></div>
+</div>
+<p>Then download data of GSE204684 at <a class="reference external" href="https://datasets.cellxgene.cziscience.com/c7e6fe97-f615-41e4-a631-0c3c74a7d20f.h5ad">https://datasets.cellxgene.cziscience.com/c7e6fe97-f615-41e4-a631-0c3c74a7d20f.h5ad</a> and preprocess the data as data_process.ipynb.</p>
+<p>Finally, run the demo of GSE204684.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">manin</span><span class="o">.</span><span class="n">py</span> <span class="o">&amp;&amp;</span> <span class="n">python3</span> <span class="n">main_joint_fine_tunning</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The latent embedings and model checkpoint files will be saved in ./data_GSE204684_developing_human_cerebral_cortex folder.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to change the model or path parameters, modify them in main.py or main_joint_fine_tunning.py directly in the parser part.</p>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">PVAED_tutorial</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, ywNiu.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
