@@ -42,7 +42,7 @@ Finally, run the demo of GSE204684.
 
 .. code-block:: python
 
-   python3 manin.py && python3 main_joint_fine_tunning.py
+   python3 main.py && python3 main_joint_fine_tunning.py
 The latent embedings and model checkpoint files will be saved in ./data_GSE204684_developing_human_cerebral_cortex folder.
 
 .. note::
